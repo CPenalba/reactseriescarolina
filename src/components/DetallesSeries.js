@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 export default class DetallesSeries extends Component {
   state = {
     serie: null,
-    status:false
+    status: false,
   };
 
   findSerie = () => {
@@ -16,7 +16,7 @@ export default class DetallesSeries extends Component {
     axios.get(url).then((response) => {
       this.setState({
         serie: response.data,
-        status:true
+        status: true,
       });
     });
   };
@@ -45,7 +45,10 @@ export default class DetallesSeries extends Component {
             <div className="card-body">
               <h5 className="card-title">{this.state.serie.nombre}</h5>
               <p className="card-text">IMDB: {this.state.serie.puntuacion}</p>
-              <NavLink className="btn btn-primary" to={"/buscar/" + this.state.serie.idSerie}>
+              <NavLink
+                className="btn btn-primary"
+                to={"/buscar/" + this.state.serie.idSerie}
+              >
                 Personajes
               </NavLink>
             </div>
