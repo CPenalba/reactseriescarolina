@@ -58,7 +58,7 @@ export default class MenuSeries extends Component {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link">Modificar personajes</a>
+                  <NavLink className="nav-link" to="/update">Modificar personajes</NavLink>
                 </li>
                 <li className="nav-item dropdown">
                   <a
